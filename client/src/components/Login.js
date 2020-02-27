@@ -27,7 +27,6 @@ class Login extends React.Component {
       .post('/api/login', this.state.credentials)
       .then(res => {
         window.localStorage.setItem('token', res.data.payload);
-        // navigate the user to /protected (whatever landing page)
         this.props.history.push('/protected');
       })
       .catch(err => console.log(err));

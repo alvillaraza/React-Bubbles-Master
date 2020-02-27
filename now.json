@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "name": "React-Bubbles-Master",
+  "builds": [
+    {
+      "src": "React-Bubbles-Master/package.json",
+      "use": "@now/static-build",
+      "config": {
+        "distDir": "build"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "React-Bubbles-Master/$1"
+    }
+  ]
+}
